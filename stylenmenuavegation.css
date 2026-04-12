@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+    background: #2192ff;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+nav {
+    background: #fff;
+    border-radius: 9px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    font-size: 2rem;
+    padding: 0 10px;
+    margin: 0 20px;
+    cursor: pointer;
+    position: relative;
+}
+nav ul li::after {
+    content: '';
+    width: 0; 
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+/* HOME */
+nav ul li:nth-child(1)::after {
+    background: #2192ff; /* azul */
+}
+/* SOBRE */
+nav ul li:nth-child(2)::after {
+    background: #ff4da6; /* rosa */
+}
+
+/* SERVIÇOS */
+nav ul li:nth-child(3)::after {
+    background: #00c853; /* verde */
+}
+
+/* CONTATO */
+nav ul li:nth-child(4)::after {
+    background: #ff9800; /* laranja */
+}
+nav ul li:hover::after{
+    width: 100%;
+}
